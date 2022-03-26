@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Table Layout</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.Panel', {
+			width: 500,
+			height: 500,
+			title: "Table Layout",
+			layout: {type: 'table', columns: 3},
+			defaults: { bodySatyle: 'padding:20px'},
+			renderTo: Ext.getBody(),
+			items: [{
+				html: '2행 사용...',
+				rowspan: 2,
+				height: 40
+			},{
+				html: '2열 사용...',
+				colspan: 2
+			},{
+				html: '1칸 씩 사용...'
+			},{
+				html: '1칸 씩 사용...'
+			},{
+				html: '1칸 씩 사용...'
+			},{
+				html: '1칸 씩 사용...'
+			},{
+				html: '1칸 씩 사용...'
+			}]
+		});
+	})
+	</script>
+</head>
+<body></body>
+</html>

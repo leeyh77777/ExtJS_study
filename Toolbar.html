@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Toolbar Test</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		// tbar(position : top)
+		Ext.create('Ext.Panel', {
+			width: 200,
+			height: 200,
+			title: 'tbar',
+			tbar : [{
+				xtype : 'toolbar',
+				items : [{
+					xtype : 'button',
+					text : '확인'
+				},{
+					xtype : 'button',
+					text : '취소',
+				}]
+			}],
+			renderTo: document.querySelector('#tbar')
+		});
+		// bbar(position : bottom)
+		Ext.create('Ext.Panel', {
+			width: 200,
+			height: 200,
+			title: 'bbar',
+			bbar : [{
+				xtype : 'toolbar',
+				items : [{
+					xtype : 'button',
+					text : '확인'
+				},{
+					xtype : 'button',
+					text : '취소',
+				}]
+			}],
+			renderTo: document.querySelector('#bbar')
+		});
+		// lbar(position : left)
+		Ext.create('Ext.Panel', {
+			width: 200,
+			height: 200,
+			frame: true,
+			title: 'lbar',
+			lbar : [{
+				xtype : 'toolbar',
+				items : [{
+					xtype : 'button',
+					text : '확인'
+				},{
+					xtype : 'button',
+					text : '취소',
+				}]
+			}],
+			renderTo: document.querySelector('#lbar')
+		});
+		// rbar(position : right)
+		Ext.create('Ext.Panel', {
+			width: 200,
+			height: 200,
+			frame: true,
+			title: 'rbar',
+			rbar : [{
+				xtype : 'toolbar',
+				items : [{
+					xtype : 'button',
+					text : '확인'
+				},{
+					xtype : 'button',
+					text : '취소',
+				}]
+			}],
+			renderTo: document.querySelector('#rbar')
+		});
+		// fbar(position : footer)
+		Ext.create('Ext.Panel', {
+			width: 200,
+			height: 200,
+			frame: true,
+			title: 'fbar',
+			fbar : [{
+				xtype : 'toolbar',
+				items : [{
+					xtype : 'button',
+					text : '확인'
+				},{
+					xtype : 'button',
+					text : '취소',
+				}]
+			}],
+			renderTo: document.querySelector('#fbar')
+		});
+	})
+	</script>
+</head>
+<body>
+<div id='tbar' style='float: left;'></div>
+<div id='bbar' style='float: left;'></div>
+<div id='lbar' style='float: left;'></div>
+<div id='rbar' style='float: left;'></div>
+<div id='fbar' style='float: left;'></div>
+</body>
+</html>

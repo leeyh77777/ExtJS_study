@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Window</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		var winObject = Ext.create('Ext.window.Window',{
+										width: 300,
+										height: 200,
+										autoShow: false
+									});
+		Ext.create('Ext.Panel', {
+			width: 400,
+			height: 400,
+			title: 'Panel',
+			items: [{
+				xtype: 'button',
+				text: 'Click Me',
+				handler: function() {
+							winObject.show();
+						}
+			}],
+			renderTo: Ext.getBody()
+		})
+	})
+	</script>
+</head>
+<body>
+</body>
+</html>

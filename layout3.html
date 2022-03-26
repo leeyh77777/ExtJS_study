@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Accordion Layout</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.Panel', {
+			title: 'Accordion',
+			width: 700,
+			height: 500,
+			layout: 'border',
+			items: [{
+				region: 'north',
+				title: '상단',
+				layout: 'fit',
+				flex: 1,
+				html: '상단패널....',
+				split:true
+			},{
+				region: 'south',
+				title: '하단',
+				layout: 'fit',
+				flex: 1,
+				html: '하단패널....',
+				split:true
+			},{
+				region: 'east',
+				title: '우측',
+				layout: 'fit',
+				flex: 1,
+				html: '우측 패널....',
+				split:true
+			},{
+				tiregion: 'west',
+				title: '좌측',
+				layout: 'fit',
+				flex: 1,
+				html: '좌측 패널...',
+				split:true
+			}],
+			renderTo: Ext.getBody()
+		});
+	})
+	</script>
+</head>
+</html>

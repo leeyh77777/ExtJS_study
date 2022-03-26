@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Form Layout</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.Panel', {
+			width: 500,
+			height: 500,
+			title: "Form",
+			layout:'form',
+			renderTo: Ext.getBody(),
+			items: [{
+				xtype: 'textfield',
+				fieldLabel: '첫번째 텍스트필드'
+			},{
+				xtype: 'textfield',
+				fieldLabel: '두번째 텍스트필드'
+			}]
+		});
+	})
+	</script>
+</head>
+<body></body>
+</html>

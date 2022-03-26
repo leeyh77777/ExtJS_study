@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Form Layout</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.Panel', {
+			width: 500,
+			height: 500,
+			title: "Horizontal Layout",
+			layout:'vbox',
+			renderTo: Ext.getBody(),
+			items: [{
+				title: 'First Pannel',
+				width: '80%',
+				flex: 1,
+				html: "첫번째 패널 내용...."
+			},{
+				title: 'Seconde Pannel',
+				width: '100%',
+				flex: 1,
+				html: "두번째 패널 내용...."
+			},{
+				title: 'Third Pannel',
+				width: '50%',
+				flex: 1,
+				html: "세번째 패널 내용...."
+			}]
+		});
+	})
+	</script>
+</head>
+<body></body>
+</html>

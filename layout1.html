@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Absolute Layout</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.Panel', {
+			title: 'Absolute',
+			width: 250,
+			height: 500,
+			x: 150,
+			y: 50,
+			layout: 'absolute',
+			renderTo: Ext.getBody()
+		});
+	})
+	</script>
+</head>
+</html>

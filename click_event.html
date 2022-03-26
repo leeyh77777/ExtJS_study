@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Handler</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.Panel', {
+			width: 200,
+			height: 200,
+			frame: true,
+			title: 'Button Event Test',
+			items: [{
+				xtype: 'button',
+				text: 'Click Me',
+				listeners: [{
+					click: function() {
+						Ext.Msg.alert("Listener", "Click Test");
+					}
+				}]
+			}],
+			renderTo: Ext.getBody()
+		});
+	})
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Card Layout</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.Panel', {
+			width: 500,
+			height: 500,
+			layout: 'card',
+			tbar: [{
+				text: 'Before',
+				handler: function(btn) {
+					// before 컴포넌트가 있을때
+					if(btn.up('panel').getLayout().getPrev()) {
+						btn.up('panel').setActiveItem(btn.up('panel').getLayout().getPrev());
+				} else {
+					// before 컴포넌트가 없을때
+					Ext.toast({
+						html: 'Before가 없습니다.',
+						width: 200,
+						align: 't',
+						closable: false
+					});
+				}
+				}
+			},{
+				text: 'Next',				
+				handler: function(btn) {
+					// next 컴포넌트가 있을때
+					if(btn.up('panel').getLayout().getNext()) {
+						btn.up('panel').setActiveItem(btn.up('panel').getLayout().getNext());
+				} else {
+					// after 컴포넌트가 없을때
+					Ext.toast({
+						html: 'Next가 없습니다.',
+						width: 200,
+						align: 't',
+						closable: false
+					});
+				}
+				}
+			}],
+			items: [{
+				title: '1page',
+				html: '1Page 내용.....'
+			},{
+				title: '2page',
+				html: '2Page 내용.....'
+			},{
+				title: '3page',
+				html: '3Page 내용.....'
+			}],
+			renderTo: Ext.getBody()
+		});
+	})
+	</script>
+</head>
+</html>

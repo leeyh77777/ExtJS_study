@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Button</title>
+	<link href="../packages/ext-theme-gray/build/resources/ext-theme-gray-all.css" rel="stylesheet">
+	<script type="text/javascript" src="../build/ext-all.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function() {
+		Ext.create('Ext.Panel', {
+			width: 500,
+			height: 200,
+			layout: {
+				type:'hbox',
+				align: 'center',
+				pack: 'center'
+			},
+			// 상단 메뉴
+			tbar: [
+				// default
+				{
+					xtype : 'button',
+					text : 'default button'
+				},
+				// toggle
+				{
+					xtype : 'button',
+					enableToggle: true,
+					text : 'toggle button'
+				},
+				// menu
+				{
+					xtype : 'button',
+					text : 'menu button',
+					menu : [{
+						text : 'menu1'
+					},{
+						text : 'menu2'
+					},{
+						text : 'menu3'
+					}]
+				},
+				// split(화살표 메뉴와 구분)
+				{
+					xtype : 'splitbutton',
+					text : 'split button',
+					menu : [{
+						text : 'split1'
+					},{
+						text : 'split2'
+					},{
+						text : 'split3'
+					}]
+				}
+			],
+			//하단 메뉴
+			bbar : [
+				// group
+				{
+					xtype: 'segmentedbutton',
+					 items: [{
+						 xtype : 'button',
+						 text: 'group1'
+					 }, {
+						 xtype : 'button',
+						 text: 'group2'
+					 }, {
+						 xtype : 'button',
+						 text: 'group3'
+					 }]
+				},
+				// group Toggle
+				{
+					 xtype: 'segmentedbutton',
+					 allowMultiple: true,
+					 items: [{
+						 xtype : 'button',
+						 text: 'group toggle1'
+					 }, {
+						 xtype : 'button',
+						 text: 'group toggle2'
+					 }, {
+						 xtype : 'button',
+						 text: 'group toggle3'
+					 }]
+				}
+			],
+			renderTo: Ext.getBody()
+		});
+	})
+	</script>
+</head>
+<body>
+</body>
+</html>
